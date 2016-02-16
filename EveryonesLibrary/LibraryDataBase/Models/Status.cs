@@ -9,7 +9,7 @@ namespace LibraryDataBase.Models
     public class Status
     {
         public int StatusId { get; set; }
-        public String status { get; set; }
+        public string StatusName { get; set; }
 
         [ForeignKey("StatusId")]
         public Copy Copy { get; set; }

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using LibraryDataBase;
+using LibraryDataBase.Models;
 
 namespace EveryonesLibrary.Controllers
 {
@@ -11,9 +13,41 @@ namespace EveryonesLibrary.Controllers
         //
         // GET: /search/
 
-        public ActionResult Index()
+        public ActionResult Index(String s)
         {
-            return View();
+            List<String> resultList = new List<String>();
+
+            try
+            {
+                using (var db = new LibraryDB())
+                {
+                    var authorObj = (from a in db.Author where (a.FirstName.Contains(s) || a.LastName.Contains(s)) select a).ToList();
+                    var bookObj = (from b in db.Book where b.Title.Contains(s) select b).ToList();
+
+                    if (authorObj != null || bookObj != null)
+                    {
+                        foreach (var a in authorObj)
+                        {
+                            resultList.Add(a.FirstName + " " + a.LastName);
+                        }
+
+                        foreach (var b in bookObj)
+                        {
+                            resultList.Add(b.Title);
+                        }
+                        ViewBag.SearchResult = resultList;
+                        return View();
+                    }
+                    else
+                    {
+                        return View(); // lists == null
+                    }
+                }
+            }
+            catch (NullReferenceException e)
+            {
+                return View(); //s.length == 0
+            }
         }
 
         //
