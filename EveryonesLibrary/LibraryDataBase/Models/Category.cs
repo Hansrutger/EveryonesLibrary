@@ -8,7 +8,7 @@ namespace LibraryDataBase.Models
     public class Category
     {
         public Borrower CategoryId { get; set; }
-        public string Category { get; set; }
+        public string CategoryName { get; set; }
         public int Period { get; set; }
         public int PenaltyPerDay { get; set; }
     }

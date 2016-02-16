@@ -7,7 +7,7 @@ namespace LibraryDataBase.Models
 {
     public class Borrower
     {
-        public int PersonId { get; set; }
+        public int PersonId { get; set; }//primary Key
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Adress { get; set; }
