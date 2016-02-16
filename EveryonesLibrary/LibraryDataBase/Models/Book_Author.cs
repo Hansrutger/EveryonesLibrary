@@ -9,7 +9,7 @@ namespace LibraryDataBase.Models
     public class Book_Author
     {
         public int Aid { get; set; }
-        public Book ISBN { get; set; }
+        public String ISBN { get; set; }
 
         [ForeignKey("Aid")]
         public Author Author { get; set; }

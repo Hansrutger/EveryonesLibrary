@@ -128,6 +128,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="Controllers\adminController.cs" />
     <Compile Include="Controllers\mainController.cs" />
     <Compile Include="Controllers\searchController.cs" />
     <Compile Include="Global.asax.cs">

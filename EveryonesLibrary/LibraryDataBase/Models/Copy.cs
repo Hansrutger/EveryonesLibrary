@@ -8,9 +8,9 @@ namespace LibraryDataBase.Models
     public class Copy
     {
         public int Barcode { get; set; }
-        public string Location { get; set; }
-        public string StatusId { get; set; }
-        public string ISBN { get; set; }
-        public string Library { get; set; }
+        public String Location { get; set; }
+        public String StatusId { get; set; }
+        public String ISBN { get; set; }
+        public String Library { get; set; }
     }
 }
