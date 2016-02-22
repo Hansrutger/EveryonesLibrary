@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -13,5 +14,7 @@ namespace LibraryDataBase.Models
         public String Adress { get; set; }
         public int TelNo { get; set; }
         public int CategoryId { get; set; }
+        [ForeignKey("CategoryIs")]
+        public Category Category { get; set; }
     }
 }
