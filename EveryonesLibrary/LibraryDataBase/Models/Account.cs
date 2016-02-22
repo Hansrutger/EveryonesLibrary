@@ -7,12 +7,16 @@ using System.Web;
 
 namespace LibraryDataBase.Models
 {
-    public class Classification
+    public class Account
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int SignId { get; set; }
-        public int Signum { get; set; }
-        public String Description { get; set; }
+        public Guid accId { get; set; }
+        public string Username { get; set; }
+        public string Password { get; set; }
+        public string PersonId { get; set; }
+
+        //[ForeignKey("PersonId")]
+        //public Borrower Borrower { get; set; }
     }
 }

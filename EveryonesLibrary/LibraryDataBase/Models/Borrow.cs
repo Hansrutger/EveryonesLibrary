@@ -19,7 +19,7 @@ namespace LibraryDataBase.Models
         [ForeignKey("Barcode")]
         public Copy Copy { get; set; }
 
-        [ForeignKey("PersonID")]
+        [ForeignKey("PersonId")]
         public Borrower Borrower { get; set; }
     }
 }

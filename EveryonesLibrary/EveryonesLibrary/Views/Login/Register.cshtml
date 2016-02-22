@@ -1,0 +1,18 @@
+﻿@model LibraryDataBase.Models.Borrower
+@{
+    ViewBag.Title = "Register";
+}
+
+<h2>Register</h2>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken();
+    <div>@Html.Label("Username: ")     </div>     <div>@Html.TextBox("Username")</div>
+    <div>@Html.Label("Password")       </div>     <div>@Html.TextBox("Password")</div>
+    @*<div>@Html.Label("First Name: ")   </div>     <div>@Html.TextBox("FirstName")</div>
+    <div>@Html.Label("Last Name: ")    </div>     <div>@Html.TextBox("LastName")</div>
+    <div>@Html.Label("Adress: ")       </div>     <div>@Html.TextBox("Address")</div>
+    <div>@Html.Label("Tel number: ")   </div>     <div>@Html.TextBox("Telno")</div>*@
+    
+    <input type="submit" value="Registrera" />
+}

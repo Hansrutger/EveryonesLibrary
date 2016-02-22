@@ -11,6 +11,7 @@ namespace LibraryDataBase
     public class LibraryDB : IdentityDbContext<IdentityUser>
     {
         public DbSet<Author> Author { get; set; }
+        public DbSet<Account> Account { get; set; }
         public DbSet<Book> Book { get; set; }
         public DbSet<Book_Author> Book_Author { get; set; }
         public DbSet<Borrow> Borrow { get; set; }
